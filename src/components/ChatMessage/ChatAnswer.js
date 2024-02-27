@@ -1,10 +1,10 @@
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
 import _ from "lodash";
 
 import ChatChartAnswer from '../ChatChartAnswer';
 import TopBar from './TopBar';
 import styles from './ChatAnswer.module.scss';
-import { CHAT_ANSWER_TYPE } from '../../constants';
+import {CHAT_ANSWER_TYPE} from '../../constants';
 import {isNotEmptyArray} from "../../utils/formatter";
 
 const ChatAnswer = ({ type, answer, isLastOne, onRefresh, isError, answerId, model }) => {
@@ -19,7 +19,10 @@ const ChatAnswer = ({ type, answer, isLastOne, onRefresh, isError, answerId, mod
       return <p>{errorText}</p>;
     }
     if (isJsonAnswer && isNotEmptyArray(jsonAnswers)) {
-      return <ChatChartAnswer isLastOne={isLastOne} answer={jsonAnswers} answerId={answerId} model={model} />;
+      return (<>
+        <p>这个是我们2.27的测试回答哈！</p>
+        <ChatChartAnswer isLastOne={isLastOne} answer={jsonAnswers} answerId={answerId} model={model} />
+      </>);
     }
     return <p>{isStrAnswer && answer ? answer : errorText}</p>;
   };
