@@ -100,8 +100,6 @@ export const getDateDimension = (period, chartType) => {
     return DATE_DIMENSION.QUARTER
   }
   switch (period) {
-    case DATE_PERIOD.DAILY:
-      return DATE_DIMENSION.DATE;
     case DATE_PERIOD.MONTHLY:
       return DATE_DIMENSION.MONTH;
     case DATE_PERIOD.WEEKLY:
@@ -171,13 +169,6 @@ const getColumnsValue = (data, columnKeys, dateKey) =>
   );
 
 export const mapDataByTrendPeriod = (data, columnKeys, dateKey) => {
-  const periodData = _.groupBy(data, item => {
-    if(dateKey==='date'){
-      return (`${item.year}-${item.month}-${item['指标日期'].split('-').pop()}`)
-    }
-    return (`${item.year}-${_.padStart(item[dateKey], 2, '0')}`)
-  });
-  return _.values(_.mapValues(periodData, (item, key) => {
-    return (getColumnsValue(item, columnKeys, key))
-  }));
+  const periodData = _.groupBy(data, item => `${item.year}-${_.padStart(item[dateKey], 2, '0')}`);
+  return _.values(_.mapValues(periodData, (item, key) => getColumnsValue(item, columnKeys, key)));
 };
