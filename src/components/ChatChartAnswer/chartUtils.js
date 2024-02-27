@@ -55,7 +55,7 @@ const parseDate = (dateStr, period) => {
         trendDate: dayjs().quarter(quarter - 1).year(year).date(1).format(DATE_FORMAT),
       } : null
     }
-    const date = dayjs(dateStr, period === DATE_PERIOD.YEARLY ? "YYYY年" : "YYYY年M月");
+    const date = dayjs(dateStr, period === DATE_PERIOD.DAILY ? "YYYY年M月D日" : DATE_PERIOD.YEARLY ? "YYYY年" : "YYYY年M月");
     if (date.isValid()) {
       return period === DATE_PERIOD.YEARLY
         ? {
