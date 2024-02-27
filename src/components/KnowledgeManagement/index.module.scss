@@ -1,0 +1,25 @@
+.title {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.topBar {
+  position: relative;
+  margin-bottom: 1rem;
+  background-color: #fff;
+
+  :global .ant-btn {
+    margin-left: 1rem;
+
+    svg {
+      margin: -0.25rem 0.5rem 0 0;
+    }
+  }
+}
+
+.actions {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%)
+}

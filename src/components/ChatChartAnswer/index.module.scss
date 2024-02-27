@@ -1,0 +1,27 @@
+@import "../../styles/variables";
+@import "common.module";
+
+.summary {
+  margin-bottom: 0.25rem;
+}
+
+.radios {
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.chartBtn {
+  :global .ant-btn {
+    margin-left: 0.5rem;
+
+    svg {
+      margin-right: 0.5rem;
+    }
+  }
+}

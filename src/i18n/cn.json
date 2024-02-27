@@ -1,0 +1,218 @@
+{
+  "nextLanguage": "English",
+  "header": {
+    "title": "Chat Bot内容管理"
+  },
+  "footer": {
+    "privacy": "隐私政策",
+    "terms": "使用条款",
+    "cookie": "Cookie政策"
+  },
+  "menu": {
+    "logout": "退出"
+  },
+  "operation": {
+    "click_upload": "或点击上传文件",
+    "dragging_upload": "拖拽或点击上传文件",
+    "dragging_upload_multiple": "拖拽或点击上传多个文件（支持批量上传）",
+    "detail": "查看详情",
+    "download": "下载",
+    "cancel": "取消",
+    "save": "保存",
+    "submit": "确认",
+    "confirm": "确认",
+    "reset": "重置",
+    "go_save": "去保存",
+    "return": "返回",
+    "return_edit": "返回修改数据",
+    "leave": "离开",
+    "edit": "修改",
+    "give_up": "放弃",
+    "home": "回到首页",
+    "upload_file": "上传文件",
+    "upload_market_report": "上传市场报告",
+    "upload_daily_report": "上传日报数据",
+    "upload_domain_knowledge": "上传领域知识",
+    "loading": "正在加载...",
+    "submitting": "正在提交...",
+    "switch": "切换",
+    "delete": "删除",
+    "fold": "收起",
+    "unfold": "展开",
+    "add": "添加",
+    "copy": "复制",
+    "refresh_answer": "重新生成回答",
+    "new_chat": "开始新对话",
+    "send": "发送",
+    "refresh_page": "刷新页面",
+    "click_to_show": "点击以显示"
+  },
+  "alert": {
+    "leave": "确认离开将丢失页面上内容",
+    "give_up_edit": "放弃修改将丢失已编辑的内容",
+    "give_up_upload": "放弃上传文件?",
+    "delete_file": "确认删除该文件?"
+  },
+  "label": {
+    "loading": "正在努力加载中...",
+    "toastr": {
+      "success": "操作成功",
+      "hint": "操作提示",
+      "failure": "操作失败",
+      "save_succeed": "保存成功",
+      "no_permission_error": "暂无访问权限",
+      "not_found_error": "资源异常",
+      "network_error": "网络异常",
+      "server_error": "服务器异常",
+      "downloading_file": "开始下载",
+      "downloading_success": "下载完成",
+      "prepare_download": "正在准备下载",
+      "downloading_failure": "下载失败",
+      "delete_succeed": "删除成功",
+      "delete_failed": "删除失败"
+    },
+    "file": {
+      "dragging": "拖拽开始上传",
+      "uploading": "上传中，请稍候...",
+      "re_upload": "将修改后的 Excel 文件拖放到这里",
+      "upload_file": "上传文件",
+      "upload_complete": "上传成功",
+      "upload_failed": "上传失败",
+      "error_info": "异常信息"
+    },
+    "chat": {
+      "input_placeholder": "输入开始对话...",
+      "sample_placeholder": "尝试以下问题来开始：",
+      "safety_instructions": "安全须知",
+      "loading": "正在为你生成答案...",
+      "loading_chart": "正在加载图表...",
+      "error_answer": "抱歉，暂时无法生成答案，请重试。",
+      "empty_chart": "抱歉，未找到相关数据。",
+      "conversation": "组对话",
+      "conversations": "组对话",
+      "delete_chat_tip": "确认删除该对话吗？",
+      "data_updated_tip": "数据更新至",
+      "is_chart_answer": "该回答为图表，请",
+      "period": {
+        "today": "今天",
+        "yesterday": "昨天",
+        "this_week": "本周",
+        "before_this_week": "更早",
+        "date": "日",
+        "week": "周",
+        "month": "月",
+        "quarter": "季度",
+        "year": "年",
+        "trendDate": "日"
+      },
+      "answer_type": {
+        "error": "出现错误",
+        "internal": "来自内部数据分析",
+        "external": "来自外部报告"
+      },
+      "chart_type": {
+        "trend": "趋势图",
+        "years": "年度对比图",
+        "seasons": "季节对比图",
+        "week_average": "周度平均对比图"
+      }
+    },
+    "knowledge": {
+      "model": {
+        "qwen": "通义千问",
+        "wenxin": "文心一言"
+      },
+      "tabs": {
+        "market_report": "市场报告",
+        "daily_report": "日报",
+        "weekly_report": "周报",
+        "domain_knowledge": "领域知识"
+      },
+      "market_report": {
+        "fileType": "文件类型",
+        "name": "文档名",
+        "tags": "内容分级",
+        "type": "文件类型",
+        "useInQA": "可作回答来源",
+        "source": "来源",
+        "classification": "级别",
+        "internal": "内部",
+        "external": "外部",
+        "public": "公开",
+        "sensitive": "敏感",
+        "status": "状态",
+        "created": "上传时间",
+        "user": "操作人",
+        "action": "操作",
+        "yes": "是",
+        "no": "否"
+      },
+      "file": {
+        "support_pdf": "可上传不超过30MB的 .pdf 格式文件",
+        "support_excel": "可上传不超过30MB的 .xls .xlsx 格式文件"
+      },
+      "status": {
+        "av_scan_queued": "正在安全扫描",
+        "av_scan_failed": "安全扫描未通过",
+        "av_scan_succeed": "正在处理文档",
+        "os_load_queued": "正在处理文档",
+        "os_load_failed": "文档上传失败",
+        "os_load_succeed": "文档上传成功",
+        "csv_load_queued": "正在处理文档",
+        "csv_load_failed": "文档上传失败",
+        "csv_load_succeed": "文档上传成功"
+      },
+      "type": {
+        "daily_report_data": "日报数据",
+        "daily_report": "日报",
+        "domain_knowledge": "领域知识"
+      },
+      "upload_file": "将Excel或PDF文件拖放到这里",
+      "embedding_file": "正在处理文件，请稍后刷新页面查看上传结果"
+    },
+    "prediction_dashboard": {
+      "date_range": {
+        "1_month": "1个月",
+        "3_months": "3个月",
+        "6_months": "6个月",
+        "ytd": "今年",
+        "1_year": "1年",
+        "3_years": "3年",
+        "5_years": "5年",
+        "daily": "日间",
+        "weekly": "周间",
+        "monthly": "月间",
+        "yearly": "年间",
+        "all": "全部",
+        "yuan": "元",
+        "dollar": "美元"
+      }
+    }
+  },
+  "error": {
+    "common": "操作异常",
+    "common_detail": "操作异常 (详细：{{detail}}) ",
+    "network_error": "网络连接异常，请检查再重试",
+    "timeout": "请求超时，请稍后刷新或重试",
+    "over_limit": "不能超过{{count}}个字符",
+    "file": {
+      "over_limit": "抱歉, 暂不支持超过 30MB 的文件"
+    },
+    "knowledge_daily_data": {
+      "unsupported_file": "这似乎不是一个 .xls .xlsx 文件"
+    },
+    "knowledge_domain_data": {
+      "unsupported_file": "这似乎不是一个 .json 文件"
+    }
+  },
+  "warning": {
+    "file": {
+      "support_knowledge_daily_data": "我们目前支持不超过30MB的 .xls .xlsx 格式文件",
+      "support_knowledge_domain_data": "我们目前支持不超过30MB的 .json 格式文件"
+    },
+    "knowledge": {
+      "empty_file": "文件不满足要求，请重新检查！",
+      "empty_files": "所有文件均不满足要求，请重新检查！"
+    }
+  }
+}

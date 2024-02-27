@@ -1,0 +1,23 @@
+@import "../../styles/variables";
+
+.loadingBar {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  color: $text-light-gray;
+}
+
+.loadingIcon {
+  margin-right: 0.5rem;
+  animation: loadingCircle 1.5s infinite linear;
+
+  path {
+    fill: #214FCD;
+  }
+}
+
+@keyframes loadingCircle {
+  to {
+    transform: rotate(360deg);
+  }
+}

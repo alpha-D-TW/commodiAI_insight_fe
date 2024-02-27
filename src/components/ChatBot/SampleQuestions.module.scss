@@ -1,0 +1,30 @@
+@import "../../styles/variables";
+
+.title {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+}
+
+.section {
+  margin: 1rem 0;
+
+  h3 {
+    margin: 0.5rem 0;
+    font-size: $font-size-base;
+    color: $text-dark-gray;
+  }
+}
+
+.questionList {
+  margin: 0 -0.25rem;
+}
+
+.questionBtn {
+  margin: 0.25rem;
+  max-width: 100%;
+  height: auto;
+  font-size: $font-size-sm;
+  text-align: left;
+  white-space: pre-wrap;
+  border-radius: 1rem;
+}

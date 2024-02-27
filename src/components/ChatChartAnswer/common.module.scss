@@ -1,0 +1,8 @@
+@import "../../styles/variables";
+
+.chart {
+  margin-bottom: 0.5rem;
+  flex: 1 1 50%;
+  min-width: 22.5rem;
+  border-top: 1px dashed $border-gray;
+}

@@ -1,0 +1,45 @@
+@import "../../styles/variables";
+@import "common.module";
+
+.topBar {
+  margin-bottom: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.label {
+  padding: 0.5rem 1rem;
+  font-size: $font-size-sm;
+  line-height: 1rem;
+  color: $primary-blue;
+  background-color: rgba($primary-blue, 0.05);
+  border-radius: 1rem;
+
+  svg {
+    margin-right: 0.25rem;
+  }
+
+  span {
+    vertical-align: bottom;
+  }
+}
+
+.errorLabel {
+  @extend .label;
+
+  color: $dark-red;
+  background-color: rgba($dark-red, 0.05);
+}
+
+.actionBar {
+  @extend .icons;
+
+  button {
+    margin-left: 0.5rem;
+  }
+}
+
+.refreshIcon path {
+  fill: #bcd1e9;
+}

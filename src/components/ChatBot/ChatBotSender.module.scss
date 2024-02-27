@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+@import "../../components/ChatMessage/common.module";
+
+.sendContainer {
+  flex: 0 0;
+  padding: 1rem 2rem;
+  background-color: #fff;
+
+  :global .ant-btn.ant-btn-icon-only {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%;
+  }
+}
+
+.sendBox {
+  flex: 1 1;
+  margin-left: 0.5rem;
+  position: relative;
+
+  :global .ant-input-lg {
+    padding-right: 2.5rem;
+    font-size: $font-size-base;
+    border-radius: 2rem;
+  }
+}
+
+.sendBtn {
+  position: absolute;
+  top: 50%;
+  right: 3px;
+  transform: translateY(-50%);
+}

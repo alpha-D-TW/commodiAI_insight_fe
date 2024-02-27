@@ -1,0 +1,81 @@
+@import "../../styles/variables";
+
+.uploadBox {
+  flex: 1;
+  padding: 2rem;
+  background-color: #fff;
+
+  :global {
+    .ant-upload.ant-upload-drag {
+      padding: 4rem 0;
+      border: 2px dashed rgba($primary-blue, 0.8);
+      background-color: #fff;
+    }
+
+    .ant-upload-drag-icon svg {
+      width: 4rem;
+      height: 4rem;
+      object-fit: contain;
+    }
+  }
+}
+
+.uploadBox.sm {
+  :global .ant-upload.ant-upload-drag {
+    padding: 1rem 0;
+  }
+}
+
+.uploadingContainer {
+  :global {
+    .ant-upload.ant-upload-drag {
+      padding: 6.5rem 0;
+      border: 1px dashed #e6e6e6;
+      cursor: initial;
+
+      &:hover {
+        border-color: #e6e6e6;
+      }
+    }
+  }
+}
+
+.uploadingContainer.sm {
+  :global .ant-upload.ant-upload-drag {
+    padding: 2.25rem 0;
+  }
+}
+
+.previewLabel {
+  margin-left: 0.5rem;
+  vertical-align: middle;
+}
+
+.uploadBtn {
+  margin: 1.5rem 0 1rem;
+}
+
+.progressContainer {
+  position: relative;
+  margin: 0 auto;
+  width: 20rem;
+}
+
+.uploadIcon {
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+}
+
+.uploadTip {
+  margin-top: 1rem;
+  color: $primary-blue;
+}
+
+.warning {
+  color: $dark-red;
+}
+
+.success {
+  color: $primary-blue;
+}

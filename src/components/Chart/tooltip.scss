@@ -1,0 +1,75 @@
+@import "../../styles/variables";
+
+.tooltip-container {
+  padding: 0.75rem 1rem;
+  min-width: 10rem;
+  font-size: $font-size-sm;
+  background-color: rgb(255 255 255 / 90%);
+  color: $text-black;
+  border: solid 1px $light-gray;
+  border-radius: 4px;
+  box-shadow: 0 -1px 6px 2px rgb(174 174 174 / 50%);
+
+  .tooltip-title-container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    line-height: 1.25rem;
+    border-bottom: 1px solid #dcdbdb;
+  }
+
+  .tooltip-title {
+    font-size: $font-size-base;
+  }
+
+  .tooltip-title-bold {
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
+  }
+
+  .tooltip-table {
+    margin-top: 0.5rem;
+
+    td {
+      padding: 0.125rem 4rem 0.125rem 0;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    tr:last-child {
+      border-bottom: none;
+    }
+  }
+
+  .tooltip-list {
+    li {
+      margin-top: 0.5rem;
+    }
+  }
+
+  %tooltip-icon {
+    margin-right: 0.5rem;
+    width: 0.375rem;
+    height: 0.375rem;
+  }
+
+  .tooltip-icon {
+    @extend %tooltip-icon;
+  }
+
+  .tooltip-with-label {
+    display: flex;
+    align-items: center;
+
+    span {
+      @extend %tooltip-icon;
+    }
+  }
+
+  .tooltip-trend-arrow {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

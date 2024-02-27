@@ -1,0 +1,218 @@
+{
+  "nextLanguage": "中文",
+  "header": {
+    "title": "Chat Bot Management"
+  },
+  "footer": {
+    "privacy": "Privacy policy",
+    "terms": "Terms of use",
+    "cookie": "Cookie policy"
+  },
+  "menu": {
+    "logout": "Logout"
+  },
+  "operation": {
+    "click_upload": "OR click to upload",
+    "dragging_upload": "Click or drag one file to this area to upload",
+    "dragging_upload_multiple": "Click or drag files to this area to upload",
+    "detail": "Details",
+    "download": "Download",
+    "cancel": "Cancel",
+    "save": "Save",
+    "submit": "Submit",
+    "confirm": "Confirm",
+    "reset": "Reset",
+    "go_save": "Go to save",
+    "return": "Go back",
+    "return_edit": "Go back and edit data",
+    "leave": "Leave",
+    "edit": "Edit",
+    "give_up": "Discard",
+    "home": "Back to homepage",
+    "upload_file": "Upload a file",
+    "upload_market_report": "Upload market report",
+    "upload_daily_report": "Upload daily data",
+    "upload_domain_knowledge": "Upload domain knowledge",
+    "loading": "Loading...",
+    "submitting": "Submitting...",
+    "switch": "Switch",
+    "delete": "Discard",
+    "fold": "Fold",
+    "unfold": "Unfold",
+    "add": "Add",
+    "copy": "Copy",
+    "refresh_answer": "Answer again",
+    "new_chat": "New chat",
+    "send": "Send",
+    "refresh_page": "Refresh page",
+    "click_to_show": "Click to show"
+  },
+  "alert": {
+    "leave": "Leave will lose the content on the page",
+    "give_up_edit": "Discard changes will lose the edited content",
+    "give_up_upload": "Discard the file?",
+    "delete_file": "Delete the file?"
+  },
+  "label": {
+    "loading": "Loading...",
+    "toastr": {
+      "success": "Operation success",
+      "hint": "Operation tips",
+      "failure": "Operation failure",
+      "save_succeed": "Save successful",
+      "no_permission_error": "No permission",
+      "not_found_error": "Resource exception",
+      "network_error": "Network exception",
+      "server_error": "Server exception",
+      "downloading_file": "Start download",
+      "downloading_success": "Download successfully",
+      "prepare_download": "Prepare to download",
+      "downloading_failure": "Download failure",
+      "delete_succeed": "Discard success",
+      "delete_failed": "Discard failed"
+    },
+    "file": {
+      "dragging": "Drag and drop to upload",
+      "uploading": "Uploading, please wait...",
+      "re_upload": "Please drop the modified file here",
+      "upload_file": "Upload a file",
+      "upload_complete": "Upload successful",
+      "upload_failed": "Upload failed",
+      "error_info": "Error message"
+    },
+    "chat": {
+      "input_placeholder": "Enter to start a conversation",
+      "sample_placeholder": "Start with the following questions: ",
+      "safety_instructions": "Safety Instructions",
+      "loading": "Answering...",
+      "loading_chart": "Loading chart...",
+      "error_answer": "Sorry, unable to generate an answer now, please try again.",
+      "empty_chart": "Sorry, no available data now.",
+      "conversation": " conversation",
+      "conversations": " conversations",
+      "delete_chat_tip": "Are you sure to delete this conversation？",
+      "data_updated_tip": "Data updated to ",
+      "is_chart_answer": "This answer is a diagram, please",
+      "period": {
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "this_week": "This week",
+        "before_this_week": "Before this week",
+        "date": "Day",
+        "week": "Week",
+        "month": "Month",
+        "quarter": "Quarter",
+        "year": "Year",
+        "trendDate": "Day"
+      },
+      "answer_type": {
+        "error": "Error occurred",
+        "internal": "From internal data",
+        "external": "From external data"
+      },
+      "chart_type": {
+        "trend": "Trend chart",
+        "years": "Years chart",
+        "seasons": "Seasons chart",
+        "week_average": "Weekly average chart"
+      }
+    },
+    "knowledge": {
+      "model": {
+        "qwen": "QianWen",
+        "wenxin": "ERNIE Bot"
+      },
+      "tabs": {
+        "market_report": "Market report",
+        "daily_report": "Daily report",
+        "weekly_report": "Weekly report",
+        "domain_knowledge": "Domain knowledge"
+      },
+      "market_report": {
+        "fileType": "File type",
+        "name": "Name",
+        "tags": "Tags",
+        "type": "File type",
+        "useInQA": "Used as answer",
+        "source": "Source",
+        "classification": "Classification",
+        "internal": "Internal",
+        "external": "External",
+        "public": "Public",
+        "sensitive": "Sensitive",
+        "status": "Status",
+        "created": "Created at",
+        "user": "User",
+        "action": "Action",
+        "yes": "Yes",
+        "no": "No"
+      },
+      "file": {
+        "support_pdf": "Files of .pdf and less than 30MB are supported",
+        "support_excel": "Files of .xls .xlsx and less than 30MB are supported"
+      },
+      "status": {
+        "av_scan_queued": "Security scanning",
+        "av_scan_failed": "Security scan failed",
+        "av_scan_succeed": "Uploading",
+        "os_load_queued": "Uploading",
+        "os_load_failed": "Upload failed",
+        "os_load_succeed": "Upload succeeded",
+        "csv_load_queued": "Uploading",
+        "csv_load_failed": "Upload failed",
+        "csv_load_succeed": "Upload succeeded"
+      },
+      "type": {
+        "daily_report_data": "Data for daily report",
+        "daily_report": "Daily report",
+        "domain_knowledge": "Domain knowledge"
+      },
+      "upload_file": "Drag and drop your Excel or PDF file here",
+      "embedding_file": "The file is being processed. Please refresh the page later to view the result."
+    },
+    "prediction_dashboard": {
+      "date_range": {
+        "1_month": "1 month",
+        "3_months": "3 months",
+        "6_months": "6 months",
+        "ytd": "YTD",
+        "1_year": "1 year",
+        "3_years": "3 years",
+        "5_years": "5 years",
+        "daily": "day",
+        "weekly": "week",
+        "monthly": "month",
+        "yearly": "year",
+        "all": "All",
+        "yuan": "元",
+        "dollar": "美元"
+      }
+    }
+  },
+  "error": {
+    "common": "Operation failure",
+    "common_detail": "Operation failure (detail：{{detail}}) ",
+    "network_error": "Network connection error, please check then retry it.",
+    "timeout": "Request timeout, please refresh page or retry.",
+    "over_limit": "No more that {{count}} characters",
+    "file": {
+      "over_limit": "The file should not exceed 30MB"
+    },
+    "knowledge_daily_data": {
+      "unsupported_file": "It's not a .xls .xlsx file"
+    },
+    "knowledge_domain_data": {
+      "unsupported_file": "It's not a .json file"
+    }
+  },
+  "warning": {
+    "file": {
+      "support_knowledge_daily_data": "Files of .xls .xlsx and less than 30MB are supported",
+      "support_knowledge_domain_data": "Files of .json and less than 30MB are supported"
+    },
+    "knowledge": {
+      "empty_file": "The file is not supported. Please check again.",
+      "empty_files": "All files are not supported. Please check again."
+    }
+  }
+}

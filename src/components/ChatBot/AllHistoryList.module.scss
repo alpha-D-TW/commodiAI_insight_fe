@@ -1,0 +1,125 @@
+@import "../../styles/variables";
+@import "../../components/ChatMessage/common.module";
+
+.newChatBtn {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border-bottom: 1px solid $border-gray;
+
+  svg {
+    margin: -0.25rem 0.5rem 0 0;
+  }
+
+  :global .ant-btn-primary.ant-btn-background-ghost:not(:disabled):not(.ant-btn-disabled):hover {
+    background-color: $primary-blue;
+    color: #fff;
+
+    svg path {
+      fill: #fff;
+      transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+  }
+}
+
+.container {
+  position: absolute;
+  top: 81px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.content {
+  padding: 1rem 2rem 2rem;
+  height: 100%;
+  overflow-y: scroll;
+  box-sizing: border-box;
+}
+
+.group {
+  margin-top: 2rem;
+}
+
+.time {
+  font-size: $font-size-sm;
+  color: $text-dark-gray;
+}
+
+.dialogue {
+  margin-top: 0.5rem;
+  padding: 0.5rem 0 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.5;
+  border: 1px solid #bcd1e9;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.active {
+  background-color: #e7ebf4;
+  border: 1px solid $primary-blue;
+}
+
+.left {
+  width: 10rem;
+}
+
+.question {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.count {
+  margin-right: 0.25rem;
+  color: $primary-blue;
+  font-weight: $font-weight-bold;
+}
+
+.unit {
+  font-size: $font-size-sm;
+  color: $text-dark-gray;
+}
+
+.rightIcon {
+  margin-right: 1rem;
+  text-align: right;
+
+  svg {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+}
+
+.actions {
+  @extend .icons;
+  margin-right: 0.5rem;
+
+  :global .ant-btn.ant-btn-icon-only {
+    width: 1rem;
+    height: 1rem;
+
+    &:last-child {
+      margin-left: 0.5rem;
+    }
+
+    svg {
+      vertical-align: bottom;
+    }
+
+    &:hover svg path {
+      fill: $primary-blue;
+    }
+
+    &:disabled svg path {
+      fill: $text-light-gray;
+    }
+  }
+
+  svg path {
+    fill: #7f7f7f;
+  }
+}

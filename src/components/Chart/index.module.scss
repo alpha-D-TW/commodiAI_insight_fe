@@ -1,0 +1,33 @@
+@import '../../styles/variables';
+
+.container {
+  :global {
+    .recharts-cartesian-axis {
+      font-size: $font-size-sm;
+    }
+
+    .recharts-cartesian-grid {
+      .recharts-cartesian-grid-horizontal,
+      .recharts-cartesian-grid-vertical {
+        line:last-child {
+          visibility: hidden;
+        }
+      }
+    }
+
+    .recharts-brush rect {
+      stroke: #dfe7ec;
+    }
+
+    .recharts-brush-texts text {
+      font-size: $font-size-sm;
+      fill: #888;
+    }
+  }
+}
+
+.checkbox {
+  margin-bottom: 0.5rem;
+  justify-content: flex-end;
+  margin-right: 2rem
+}

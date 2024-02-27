@@ -1,0 +1,37 @@
+@import "../../styles/variables";
+
+.form {
+  :global .ant-upload-list {
+    max-height: 10rem;
+    overflow-y: scroll;
+  }
+}
+
+.uploadIcon {
+  margin-bottom: 1rem;
+
+  svg {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+.uploadText {
+  color: $text-dark-gray;
+}
+
+.uploadTips {
+  margin-top: 0.5rem;
+  font-size: $font-size-sm;
+  color: rgba(0, 0, 0, 0.45);
+}
+
+.actionBar {
+  display: flex;
+  justify-content: center;
+
+  button:first-of-type {
+    margin-right: 1rem;
+  }
+}
+
