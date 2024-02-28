@@ -148,14 +148,14 @@ const OpxSelectableChart = ({
     : chartData;
   return (
     <div className={styles.container}>
-      {/*{shouldShowDateDomain && (*/}
-      {/*  <DateDomainSelect*/}
-      {/*    selectOptions={hasLongDateDomain ? LONG_SELECT_OPTIONS : SHORT_SELECT_OPTIONS}*/}
-      {/*    selectedKey={dateOption.key}*/}
-      {/*    size={optionSize}*/}
-      {/*    onChange={v => setDateOption(v && v.render ? v : DEFAULT_ALL_OPTION)}*/}
-      {/*  />*/}
-      {/*)}*/}
+      {shouldShowDateDomain && (
+        <DateDomainSelect
+          selectOptions={hasLongDateDomain ? LONG_SELECT_OPTIONS : SHORT_SELECT_OPTIONS}
+          selectedKey={dateOption.key}
+          size={optionSize}
+          onChange={v => setDateOption(v && v.render ? v : DEFAULT_ALL_OPTION)}
+        />
+      )}
       {!disableSelectTypes && isNotEmptyArray(types) && (
         <OpxCheckboxGroup
           className={styles.checkbox}

@@ -11,7 +11,7 @@ const SampleQuestions = ({ data, onClickQuestion }) => {
     <li key={category} className={styles.section}>
       <h3>{category}</h3>
       <div className={styles.questionList}>
-        {_.map(_.slice(questions, 0, 2), item => (
+        {_.map(_.slice(questions, 0, 4), item => (
           <Button key={item} type="primary" ghost className={styles.questionBtn} onClick={() => onClickQuestion(item)}>
             {item}
           </Button>

@@ -47,8 +47,8 @@ const KnowledgeManagement = () => {
 	};
 
 	return (
-		<div>
-			<h1 className={styles.title}>{t("header.title")}</h1>
+		<div style={{display:"flex",flexDirection:'column',flex:'1',backgroundColor:'#fff',marginBottom:'24px',borderRadius:'24px'}}>
+			{/*<h1 className={styles.title}>{t("header.title")}</h1>*/}
 			<div className={styles.topBar}>
 				<Menu
 					onClick={({key}) => setCurrentKey(key)}

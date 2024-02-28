@@ -19,10 +19,11 @@ const TopBar = ({ isError, isLastOne, onRefresh, isStrAnswer, answer }) => {
           <span>{t('label.chat.answer_type.error')}</span>
         </div>
       ) : (
-        <div className={styles.label}>
-          <InternalIcon />
-          <span>{t('label.chat.answer_type.internal')}</span>
-        </div>
+          <div/>
+        // <div className={styles.label}>
+        //   <InternalIcon />
+        //   <span>{t('label.chat.answer_type.internal')}</span>
+        // </div>
       )}
       <div className={styles.actionBar}>
         {isLastOne && (
@@ -30,13 +31,13 @@ const TopBar = ({ isError, isLastOne, onRefresh, isStrAnswer, answer }) => {
             <Button icon={<RefreshIcon className={styles.refreshIcon} />} onClick={onRefresh} />
           </Tooltip>
         )}
-        <Tooltip title={t('operation.copy')}>
-          <Button
-            disabled={!isAvailableStrAnswer}
-            icon={<CopyIcon />}
-            onClick={() => (isAvailableStrAnswer ? copy(answer) : null)}
-          />
-        </Tooltip>
+        {/*<Tooltip title={t('operation.copy')}>*/}
+        {/*  <Button*/}
+        {/*    disabled={!isAvailableStrAnswer}*/}
+        {/*    icon={<CopyIcon />}*/}
+        {/*    onClick={() => (isAvailableStrAnswer ? copy(answer) : null)}*/}
+        {/*  />*/}
+        {/*</Tooltip>*/}
       </div>
     </div>
   );

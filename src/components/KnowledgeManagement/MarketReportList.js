@@ -12,6 +12,7 @@ const MarketReportList = ({ allFiles, onRefresh, loading }) => {
   } = useTranslation();
 
   return (
+      <div style={{padding:'0 24px'}}>
     <Table
         bordered
         pagination={false}
@@ -41,6 +42,8 @@ const MarketReportList = ({ allFiles, onRefresh, loading }) => {
         render,
       }))}
     />
+      </div>
+
   );
 };
 

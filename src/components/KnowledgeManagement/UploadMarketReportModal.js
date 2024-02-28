@@ -100,14 +100,14 @@ export const UploadMarketReportModal = ({ visible, onClose, onRefresh, title }) 
           labelCol={{ span: 6 }}
           wrapperCol={{ span: 16 }}
           initialValues={{
-            fileType: FILE_TYPE.EXCEL,
+            fileType: FILE_TYPE.PDF,
           }}
           onFinish={handleSubmit}
         >
           <Form.Item name="fileType" label={t(`label.knowledge.market_report.fileType`)}>
             <Radio.Group>
+              <Radio value={FILE_TYPE.PDF}>PDF</Radio>
               <Radio value={FILE_TYPE.EXCEL}>Excel</Radio>
-              <Radio value={FILE_TYPE.PDF}>PDF(To be done)</Radio>
             </Radio.Group>
           </Form.Item>
           <Form.Item dependencies={['fileType']} noStyle>

@@ -6,8 +6,7 @@
 .topBar {
   position: relative;
   margin-bottom: 1rem;
-  background-color: #fff;
-
+  padding:16px;
   :global .ant-btn {
     margin-left: 1rem;
 
@@ -20,6 +19,6 @@
 .actions {
   position: absolute;
   top: 50%;
-  right: 1rem;
+  right: 1.5rem;
   transform: translateY(-50%)
 }
