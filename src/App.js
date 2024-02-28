@@ -10,8 +10,8 @@ function App() {
 	const [showChatBot, setShowChatBot] = useState(true);
 
 	return (
-		<ConfigProvider theme={{token: {colorPrimary: '#0066FF'}}}>
-			<div className="App">
+		<ConfigProvider theme={{token: {colorPrimary: '#0066FF'}}} >
+			<div className="App" style={{padding:'24px 48px'}}>
 				<KnowledgeManagement/>
 				{!showChatBot && (
 					<div className={styles.chatBotBtn}>

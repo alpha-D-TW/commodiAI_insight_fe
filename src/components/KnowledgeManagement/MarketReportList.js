@@ -13,6 +13,8 @@ const MarketReportList = ({ allFiles, onRefresh, loading }) => {
 
   return (
     <Table
+        bordered
+        pagination={false}
       rowKey="id"
       dataSource={allFiles}
       loading={loading}

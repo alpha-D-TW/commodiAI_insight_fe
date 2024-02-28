@@ -19,16 +19,16 @@ const ChatBotHeader = ({ onClickHistory, onClose, onShowDisclaimer, model, onSwi
             <Button icon={<ChatHistoryIcon />} onClick={onClickHistory} />
           </Tooltip>
           <Divider type="vertical" />
-          <Select
-            defaultValue={model}
-            style={{ width: 90 }}
-            bordered={false}
-            options={_.values(GEN_AI_MODEL_TYPE).map(item => ({
-              value: item,
-              label: t(`label.knowledge.model.${item}`),
-            }))}
-            onChange={onSwitchModel}
-          />
+          {/*<Select*/}
+          {/*  defaultValue={model}*/}
+          {/*  style={{ width: 150 }}*/}
+          {/*  bordered={false}*/}
+          {/*  options={_.values(GEN_AI_MODEL_TYPE).map(item => ({*/}
+          {/*    value: item,*/}
+          {/*    label: t(`label.knowledge.model.${item}`),*/}
+          {/*  }))}*/}
+          {/*  onChange={onSwitchModel}*/}
+          {/*/>*/}
         </div>
         <div className={styles.logo}>
           <img src={ChatBotLogo} alt="Logo" />

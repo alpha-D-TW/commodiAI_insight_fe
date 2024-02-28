@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Button, Modal, Radio, Upload, Form } from 'antd';
+import {Button, Modal, Radio, Upload, Form, message} from 'antd';
 import _ from "lodash";
 
 import { ReactComponent as FileIcon } from '../../icons/file-icon.svg';
@@ -85,6 +85,7 @@ export const UploadMarketReportModal = ({ visible, onClose, onRefresh, title }) 
     }
     handleCloseModal();
     onRefresh();
+    message.success('上传成功！')
   };
 
   const handleUploadClose = () => {
@@ -99,14 +100,14 @@ export const UploadMarketReportModal = ({ visible, onClose, onRefresh, title }) 
           labelCol={{ span: 6 }}
           wrapperCol={{ span: 16 }}
           initialValues={{
-            fileType: FILE_TYPE.PDF,
+            fileType: FILE_TYPE.EXCEL,
           }}
           onFinish={handleSubmit}
         >
           <Form.Item name="fileType" label={t(`label.knowledge.market_report.fileType`)}>
             <Radio.Group>
-              <Radio value={FILE_TYPE.PDF}>PDF</Radio>
               <Radio value={FILE_TYPE.EXCEL}>Excel</Radio>
+              <Radio value={FILE_TYPE.PDF}>PDF(To be done)</Radio>
             </Radio.Group>
           </Form.Item>
           <Form.Item dependencies={['fileType']} noStyle>

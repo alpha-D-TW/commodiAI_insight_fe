@@ -1,7 +1,7 @@
 {
   "nextLanguage": "English",
   "header": {
-    "title": "Chat Bot内容管理"
+    "title": "commodiAI Insight"
   },
   "footer": {
     "privacy": "隐私政策",
@@ -30,7 +30,7 @@
     "give_up": "放弃",
     "home": "回到首页",
     "upload_file": "上传文件",
-    "upload_market_report": "上传市场报告",
+    "upload_market_report": "上传知识库文档",
     "upload_daily_report": "上传日报数据",
     "upload_domain_knowledge": "上传领域知识",
     "loading": "正在加载...",
@@ -55,7 +55,7 @@
   },
   "label": {
     "loading": "正在努力加载中...",
-    "toastr": {
+    "toast": {
       "success": "操作成功",
       "hint": "操作提示",
       "failure": "操作失败",
@@ -124,7 +124,7 @@
         "gpt-3.5-turbo": "gpt-3.5-turbo"
       },
       "tabs": {
-        "market_report": "市场报告",
+        "market_report": "知识库文档",
         "daily_report": "日报",
         "weekly_report": "周报",
         "domain_knowledge": "领域知识"

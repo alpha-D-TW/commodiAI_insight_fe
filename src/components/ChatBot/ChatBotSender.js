@@ -27,17 +27,17 @@ const ChatBotSender = ({ onStartNewChat, onSendChat, isLoading, questions }) => 
         <Button icon={<NewChatIcon />} onClick={onStartNewChat} />
       </Tooltip>
       <div className={styles.sendBox}>
-        <AutoComplete
-          options={_.map(questions, v => ({ value: v }))}
-          filterOption={(v, option) => !v || checkOptionMatched(option.value, v)}
-          defaultActiveFirstOption
-          backfill
-          style={{ width: '100%' }}
-          value={question}
-          disabled={isLoading}
-          onSearch={v => setQuestion(v)}
-          onSelect={handleChat}
-        >
+        {/*<AutoComplete*/}
+        {/*  options={_.map(questions, v => ({ value: v }))}*/}
+        {/*  filterOption={(v, option) => !v || checkOptionMatched(option.value, v)}*/}
+        {/*  defaultActiveFirstOption*/}
+        {/*  backfill*/}
+        {/*  style={{ width: '100%' }}*/}
+        {/*  value={question}*/}
+        {/*  disabled={isLoading}*/}
+        {/*  onSearch={v => setQuestion(v)}*/}
+        {/*  onSelect={handleChat}*/}
+        {/*>*/}
           <Input.TextArea
             placeholder={isLoading ? t('label.chat.loading') : t('label.chat.input_placeholder')}
             autoSize={{ maxRows: 4 }}
@@ -50,7 +50,7 @@ const ChatBotSender = ({ onStartNewChat, onSendChat, isLoading, questions }) => 
               }
             }}
           />
-        </AutoComplete>
+        {/*</AutoComplete>*/}
         <Tooltip title={t('operation.send')}>
           <Button
             icon={isLoading ? <SendChatDisabledIcon /> : <SendChatIcon />}

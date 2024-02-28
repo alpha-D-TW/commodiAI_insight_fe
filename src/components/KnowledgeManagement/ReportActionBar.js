@@ -28,9 +28,9 @@ const ReportActionBar = ({ data, onRefresh, disableDelete }) => {
 
   return (
     <div className={styles.actions}>
-      <Button size="small" type="link" onClick={() => handleDownload(data)} disabled={!checkFileCanDownload(data)}>
-        {t('operation.download')}
-      </Button>
+      {/*<Button size="small" type="link" onClick={() => handleDownload(data)} disabled={!checkFileCanDownload(data)}>*/}
+      {/*  {t('operation.download')}*/}
+      {/*</Button>*/}
       {!disableDelete && (
         <Popconfirm
           title={t('alert.delete_file', {

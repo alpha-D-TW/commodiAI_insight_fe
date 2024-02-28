@@ -1,7 +1,7 @@
 {
   "nextLanguage": "中文",
   "header": {
-    "title": "Chat Bot Management"
+    "title": "commodiAI Insight"
   },
   "footer": {
     "privacy": "Privacy policy",
@@ -55,7 +55,7 @@
   },
   "label": {
     "loading": "Loading...",
-    "toastr": {
+    "toast": {
       "success": "Operation success",
       "hint": "Operation tips",
       "failure": "Operation failure",
@@ -131,7 +131,7 @@
       },
       "market_report": {
         "fileType": "File type",
-        "name": "Name",
+        "name": "filename",
         "tags": "Tags",
         "type": "File type",
         "useInQA": "Used as answer",

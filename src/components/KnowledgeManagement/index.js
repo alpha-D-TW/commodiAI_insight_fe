@@ -60,13 +60,13 @@ const KnowledgeManagement = () => {
 					}))}
 				/>
 				<div className={styles.actions}>
-					<Button onClick={() => i18n.changeLanguage(language === LANGUAGES.EN ? LANGUAGES.CN : LANGUAGES.EN)}>
-						{t(`nextLanguage`)}
-					</Button>
-					<Button type="primary" onClick={handleRefreshFiles}>
-						<RefreshIcon/>
-						{t('operation.refresh_page')}
-					</Button>
+					{/*<Button onClick={() => i18n.changeLanguage(language === LANGUAGES.EN ? LANGUAGES.CN : LANGUAGES.EN)}>*/}
+					{/*	{t(`nextLanguage`)}*/}
+					{/*</Button>*/}
+					{/*<Button type="primary" onClick={handleRefreshFiles}>*/}
+					{/*	<RefreshIcon/>*/}
+					{/*	{t('operation.refresh_page')}*/}
+					{/*</Button>*/}
 					<Button type="primary" onClick={() => setShowKnowledgeModal(true)}>
 						{t(`operation.upload_${currentKey}`)}
 					</Button>

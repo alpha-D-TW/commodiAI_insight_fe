@@ -19,7 +19,11 @@ const ChatAnswer = ({ type, answer, isLastOne, onRefresh, isError, answerId, mod
       return <p>{errorText}</p>;
     }
     if (isJsonAnswer && isNotEmptyArray(jsonAnswers)) {
-      return <ChatChartAnswer isLastOne={isLastOne} answer={jsonAnswers} answerId={answerId} model={model} />;
+      return (<>
+        <p>这个是我们2.27的测试回答哈！</p>
+        <p>------------------------------------</p>
+        <ChatChartAnswer isLastOne={isLastOne} answer={jsonAnswers} answerId={answerId} model={model} />
+      </>);
     }
     return <p>{isStrAnswer && answer ? answer : errorText}</p>;
   };
