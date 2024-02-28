@@ -120,7 +120,8 @@
     "knowledge": {
       "model": {
         "qwen": "通义千问",
-        "wenxin": "文心一言"
+        "wenxin": "文心一言",
+        "gpt-3.5-turbo": "gpt-3.5-turbo"
       },
       "tabs": {
         "market_report": "市场报告",

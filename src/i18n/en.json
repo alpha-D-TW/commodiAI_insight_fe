@@ -120,7 +120,8 @@
     "knowledge": {
       "model": {
         "qwen": "QianWen",
-        "wenxin": "ERNIE Bot"
+        "wenxin": "ERNIE Bot",
+        "gpt-3.5-turbo": "gpt-3.5-turbo"
       },
       "tabs": {
         "market_report": "Market report",

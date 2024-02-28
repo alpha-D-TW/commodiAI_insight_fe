@@ -52,6 +52,7 @@ export const KNOWLEDGE_SOURCE = {
 export const GEN_AI_MODEL_TYPE = {
 	WENXIN: 'wenxin',
 	QWEN: 'qwen',
+	GPT35TURBO: "gpt-3.5-turbo"
 };
 
 export const KNOWLEDGE_TYPE = {
