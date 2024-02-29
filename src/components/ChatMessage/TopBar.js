@@ -19,7 +19,10 @@ const TopBar = ({ isError, isLastOne, onRefresh, isStrAnswer, answer }) => {
           <span>{t('label.chat.answer_type.error')}</span>
         </div>
       ) : (
-          <div/>
+          <div>
+              <Button>👍</Button>
+              <Button>👎</Button>
+          </div>
         // <div className={styles.label}>
         //   <InternalIcon />
         //   <span>{t('label.chat.answer_type.internal')}</span>
