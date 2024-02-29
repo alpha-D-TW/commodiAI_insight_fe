@@ -19,7 +19,7 @@ i18n
 	.use(LanguageDetector)
 	.init({
 		resources,
-		fallbackLng: "en",
+		fallbackLng: "cn",
 		interpolation: {
 			escapeValue: false // react already safes from xss
 		}

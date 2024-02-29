@@ -1,9 +1,8 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useRef} from 'react';
 import * as echarts from 'echarts';
-import {Radio} from 'antd';
 // Your utility functions (splitData, calculateMA) should remain the same and can be included here
 
-const MyChartComponent = ({rawData,period}) => {
+const CandleChart = ({rawData,period}) => {
     const chartRef = useRef(null);
     const myChart = useRef(null);
     const upColor = '#ec0000';
@@ -236,4 +235,4 @@ const MyChartComponent = ({rawData,period}) => {
     );
 };
 
-export default MyChartComponent;
+export default CandleChart;

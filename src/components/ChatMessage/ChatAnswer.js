@@ -20,7 +20,7 @@ const ChatAnswer = ({ type, answer, isLastOne, onRefresh, isError, answerId, mod
     }
     if (isJsonAnswer && isNotEmptyArray(jsonAnswers)) {
       return (<>
-        <p>这个是我们2.28的测试回答哈！</p>
+        <p>这个是我们2.29的测试回答哈！</p>
         <p>------------------------------------</p>
         <ChatChartAnswer isLastOne={isLastOne} answer={jsonAnswers} answerId={answerId} model={model} />
       </>);

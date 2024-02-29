@@ -13,6 +13,7 @@ import styles from './index.module.scss';
 import {isNotEmptyArray} from "../../utils/formatter";
 import {LANGUAGES} from "../../constants";
 import ChatBarChart from "./ChatBarChart";
+import CandleChart from "../Chart/candle-chart";
 
 const SLICE_LENGTH = {
     ALL: 0,
@@ -27,10 +28,12 @@ const ChatChartAnswer = ({isLastOne, answer, answerId, model}) => {
     const [loading, setLoading] = useState(false);
     const [chartsData, setChartsData] = useState(null);
     const [showChart, setShowChart] = useState(isLastOne);
-    const allChartTypes = _.uniq(_.flatten(_.map(answer, item => mapChartTypes(item?.chartTypes))));
+    const allChartTypes = _.uniq(_.flatten(_.map(answer, item => {
+        return mapChartTypes(item)
+    })));
     const [currentChartType, setCurrentChartType] = useState(allChartTypes[0] || CHAT_CHART_TYPE.TREND);
+    console.log(currentChartType)
     const [period, setPeriod] = useState(SLICE_LENGTH.ONE_MONTH)
-
     useEffect(() => {
         if (isLastOne) {
             handleFetchData();
@@ -46,6 +49,28 @@ const ChatChartAnswer = ({isLastOne, answer, answerId, model}) => {
     };
 
     const renderChart = (item, index) => {
+        if (currentChartType === CHAT_CHART_TYPE.CANDLE) {
+            return (
+                <>
+                    <div style={{
+                        display: 'flex',
+                        marginBottom: '16px',
+                        justifyContent: 'flex-end',
+                        paddingRight: '24px'
+                    }}>
+                        <Radio.Group defaultValue={SLICE_LENGTH.ONE_MONTH} buttonStyle="solid"
+                                     onChange={e => setPeriod(e.target.value)}>
+                            <Radio.Button value={SLICE_LENGTH.ALL}>全部</Radio.Button>
+                            <Radio.Button value={SLICE_LENGTH.ONE_MONTH}>1个月</Radio.Button>
+                            <Radio.Button value={SLICE_LENGTH.THREE_MONTHS}>3个月</Radio.Button>
+                            <Radio.Button value={SLICE_LENGTH.SIX_MONTHS}>6个月</Radio.Button>
+                            <Radio.Button value={SLICE_LENGTH.ONE_YEAR}>1年</Radio.Button>
+                        </Radio.Group>
+                    </div>
+                    <CandleChart rawData={allData[0].data.map(i => simpleData(i))} period={period}/>
+                </>
+            )
+        }
         if (item.period === DATE_PERIOD.YEARLY && currentChartType === CHAT_CHART_TYPE.YEARS) {
             return <ChatBarChart key={index} data={item}/>
         }
@@ -90,7 +115,7 @@ const ChatChartAnswer = ({isLastOne, answer, answerId, model}) => {
             data,
             dateColumn,
             period,
-            chartTypes: mapChartTypes(chartTypes),
+            chartTypes: chartTypes ? mapChartTypes(chartTypes) : currentChartType,
             summary,
             analysis,
             dataRangeYears,
@@ -113,31 +138,18 @@ const ChatChartAnswer = ({isLastOne, answer, answerId, model}) => {
     };
 
     const allChartsCount = _.sum(_.map(allData, ({columns}) => (isNotEmptyArray(columns) ? columns.length : 0)));
-    console.log(117,allData)
+    // console.log(117,allData)
     const hasPlaceholder = allChartsCount > 1 && allChartsCount % 2 === 1;
     return (
         <>
             {_.map(allData, ({summary, analysis, chartTypes}, index) =>
                 summary || analysis ? (
-                    <div key={index} className={styles.summary}>
+                    <div key={index} className={styles.summary} style={{marginBottom:'16px'}}>
                         {renderSummary(summary)}
                         {renderSummary(analysis)}
                     </div>
                 ) : null,
             )}
-            {/*<>*/}
-            {/*    <div style={{display: 'flex', marginBottom: '16px', justifyContent: 'flex-end', paddingRight: '24px'}}>*/}
-            {/*        <Radio.Group defaultValue={SLICE_LENGTH.ONE_MONTH} buttonStyle="solid"*/}
-            {/*                     onChange={e => setPeriod(e.target.value)}>*/}
-            {/*            <Radio.Button value={SLICE_LENGTH.ALL}>全部</Radio.Button>*/}
-            {/*            <Radio.Button value={SLICE_LENGTH.ONE_MONTH}>1个月</Radio.Button>*/}
-            {/*            <Radio.Button value={SLICE_LENGTH.THREE_MONTHS}>3个月</Radio.Button>*/}
-            {/*            <Radio.Button value={SLICE_LENGTH.SIX_MONTHS}>6个月</Radio.Button>*/}
-            {/*            <Radio.Button value={SLICE_LENGTH.ONE_YEAR}>1年</Radio.Button>*/}
-            {/*        </Radio.Group>*/}
-            {/*    </div>*/}
-            {/*    <MyChartComponent rawData={allData[0].data.map(i => simpleData(i))} period={period}/>*/}
-            {/*</>*/}
             {isNotEmptyArray(allChartTypes) && allChartTypes.length > 1 && (
                 <div className={styles.radios}>
                     <Radio.Group
@@ -153,7 +165,7 @@ const ChatChartAnswer = ({isLastOne, answer, answerId, model}) => {
                     />
                 </div>
             )}
-            <div className={styles.charts}>
+            <div className={styles.charts} style={{display:'flex',flexDirection:'column'}}>
                 {_.map(allData, renderChart)}
                 {hasPlaceholder && <div className={styles.chart}/>}
             </div>
