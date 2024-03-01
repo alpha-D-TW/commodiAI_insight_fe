@@ -33,7 +33,7 @@ const ChatChartAnswer = ({isLastOne, answer, answerId, model}) => {
     })));
     const [currentChartType, setCurrentChartType] = useState(allChartTypes[0] || CHAT_CHART_TYPE.TREND);
     console.log(currentChartType)
-    const [period, setPeriod] = useState(SLICE_LENGTH.ONE_MONTH)
+    const [period, setPeriod] = useState(SLICE_LENGTH.THREE_MONTHS)
     useEffect(() => {
         if (isLastOne) {
             handleFetchData();
@@ -58,7 +58,7 @@ const ChatChartAnswer = ({isLastOne, answer, answerId, model}) => {
                         justifyContent: 'flex-end',
                         paddingRight: '24px'
                     }}>
-                        <Radio.Group defaultValue={SLICE_LENGTH.ONE_MONTH} buttonStyle="solid"
+                        <Radio.Group defaultValue={SLICE_LENGTH.THREE_MONTHS} buttonStyle="solid"
                                      onChange={e => setPeriod(e.target.value)}>
                             <Radio.Button value={SLICE_LENGTH.ALL}>全部</Radio.Button>
                             <Radio.Button value={SLICE_LENGTH.ONE_MONTH}>1个月</Radio.Button>

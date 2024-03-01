@@ -19,12 +19,19 @@ const ChatAnswer = ({ type, answer, isLastOne, onRefresh, isError, answerId, mod
       return <p>{errorText}</p>;
     }
     if (isJsonAnswer && isNotEmptyArray(jsonAnswers)) {
-      return (<>
-        <p>这个是我们2.29的测试回答哈！</p>
-        <p>------------------------------------</p>
+      return (
         <ChatChartAnswer isLastOne={isLastOne} answer={jsonAnswers} answerId={answerId} model={model} />
-      </>);
+      );
     }
+    if(/\r\n/.test(answer)){
+      return (
+        <div style={{display:'flex',flexDirection:'column'}}>
+        <p>{answer.split(/\r\n/)[0]}</p>
+        <div style={{display:'flex',justifyContent:'flex-end', fontSize:'12px', color:'#444',marginTop:'8px'}}>数据来源：{answer.split(/\r\n/)[1]}</div>
+        </div>
+      )
+    }
+    
     return <p>{isStrAnswer && answer ? answer : errorText}</p>;
   };
 

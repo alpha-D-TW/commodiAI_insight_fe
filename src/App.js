@@ -109,7 +109,7 @@ function App() {
         }
         setIsError(false);
         setLoading(true);
-        const res = await onPostChat(question, currentSessionId, GEN_AI_MODEL_TYPE.WENXIN, existingQuestionId);
+        const res = await onPostChat(question, currentSessionId, GEN_AI_MODEL_TYPE.GPT35TURBO, existingQuestionId);
         if (res?.id) {
             setCurrentSessionId(res.id);
             setHistory(res.history);

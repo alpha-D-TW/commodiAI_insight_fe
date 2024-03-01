@@ -24,10 +24,6 @@ const MarketReportList = ({ allFiles, onRefresh, loading }) => {
           key: 'name',
         },
         {
-          key: 'status',
-          render: v => (_.values(KNOWLEDGE_STATUS).includes(v) ? t(`label.knowledge.status.${v}`) : EMPTY_PLACEHOLDER),
-        },
-        {
           key: 'created',
           render: formatDateToDisplay,
         },
